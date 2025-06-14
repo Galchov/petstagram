@@ -30,3 +30,6 @@ class Photo(models.Model):
         blank=True,
     )
     date_of_publication = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.pk}: {self.description}"
